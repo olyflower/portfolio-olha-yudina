@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+	--background: #fafaf8;
+	--foreground: #18181b;
+
+	--muted: #71717a;
+	--muted-bg: #f1f1ef;
+
+	--accent: #4f46e5;
+	--accent-hover: #4338ca;
+
+	--border: #e4e4e7;
+
+	--tech-django: #092e20;
+	--tech-prisma: #2d3748;
+}
+
+.dark {
+	--background: #16161a;
+	--foreground: #e5e5e5;
+
+	--muted: #a1a1aa;
+	--muted-bg: #202024;
+
+	--accent: #818cf8;
+	--accent-hover: #6366f1;
+
+	--border: #2e2e33;
+
+	--tech-django: #4ade80;
+	--tech-prisma: #94a3b8;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+
+	--color-muted: var(--muted);
+	--color-muted-bg: var(--muted-bg);
+
+	--color-accent: var(--accent);
+	--color-accent-hover: var(--accent-hover);
+
+	--color-border: var(--border);
+
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans), sans-serif;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease;
+}
+
+@keyframes orbit-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes orbit-spin-reverse {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+.orbit-ring {
+	animation: orbit-spin 30s linear infinite;
+}
+
+.orbit-icon {
+	animation: orbit-spin-reverse 30s linear infinite;
+}
+
+.orbit-group:hover .orbit-ring,
+.orbit-group:hover .orbit-icon {
+	animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.orbit-ring,
+	.orbit-icon {
+		animation: none;
+	}
+}
