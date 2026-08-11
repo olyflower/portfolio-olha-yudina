@@ -26,7 +26,7 @@ export default function Services() {
 				{services.map(({ Icon, title, description }) => (
 					<div
 						key={title}
-						className="rounded-2xl border border-border p-6 transition hover:border-accent hover:shadow-lg"
+						className="rounded-2xl border border-border p-6 shadow-sm transition hover:border-accent hover:shadow-lg"
 					>
 						<div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
 							<Icon size={24} className="text-accent" />

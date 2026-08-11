@@ -2,10 +2,7 @@ import { featureCards, techIcons } from "@/constants/data";
 
 export default function About() {
 	return (
-		<section
-			id="about"
-			className="mx-auto max-w-7xl px-6 py-16 md:py-24"
-		>
+		<section id="about" className="mx-auto max-w-7xl px-6 py-16 md:py-24">
 			<div className="text-center">
 				<span className="text-sm font-medium uppercase tracking-wider text-accent">
 					Get to know me
@@ -29,7 +26,7 @@ export default function About() {
 					{featureCards.map(({ Icon, title, description }) => (
 						<div
 							key={title}
-							className="rounded-2xl border border-border p-6 transition hover:border-accent hover:bg-muted-bg"
+							className="rounded-2xl border border-border p-6 shadow-sm transition hover:border-accent hover:bg-muted-bg hover:shadow-lg"
 						>
 							<Icon size={28} className="text-accent" />
 
@@ -55,8 +52,8 @@ export default function About() {
 							<div
 								key={label}
 								title={label}
-								className="flex h-16 w-16 items-center justify-center rounded-xl border border-border 
-								transition hover:border-accent"
+								className="flex h-16 w-16 items-center justify-center rounded-xl border border-border shadow-sm
+												   transition hover:border-accent hover:shadow-md"
 							>
 								<Icon
 									size={28}

@@ -20,6 +20,10 @@ export const metadata: Metadata = {
 		"Software Engineer specializing in React, Next.js, Django and AI — building full-stack web applications with clean, maintainable code.",
 };
 
+export const viewport = {
+	themeColor: "#4F46E5",
+};
+
 export default function RootLayout({
 	children,
 }: Readonly<{
