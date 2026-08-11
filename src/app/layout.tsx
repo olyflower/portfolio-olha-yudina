@@ -18,6 +18,9 @@ export const metadata: Metadata = {
 	title: "Olha Yudina — Software Engineer",
 	description:
 		"Software Engineer specializing in React, Next.js, Django and AI — building full-stack web applications with clean, maintainable code.",
+	other: {
+		google: "notranslate",
+	},
 };
 
 export const viewport = {
@@ -32,6 +35,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
+			translate="no"
 			className={`${geistSans.variable} ${geistMono.variable}`}
 			suppressHydrationWarning
 		>
